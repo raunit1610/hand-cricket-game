@@ -321,13 +321,17 @@ $(document).on("keypress", function (e) {
     if (key >= 49 && key <= 57) { // Number keys 1-9
         var buttonValue = String.fromCharCode(key);
         $(".container-image-2 > img").attr("src", `./images/${buttonValue}.jpeg`);
+        $("#"+buttonValue).fadeIn(100).fadeOut(100).fadeIn(100);
         if ((turn == 1) || (turn == 4)) {
             userBatting(buttonValue);
         } else if ((turn == 2) || (turn == 3)) {
             systemBatting1(buttonValue);
         }
     } else if (key == 32 && !start) { // Spacebar to start
-        $(".start").click();
+        $(".start").fadeIn(100).fadeOut(100).fadeIn(100);
+        setTimeout(function (){
+            $(".start").click();
+        },500)
     }
 });
 
@@ -337,6 +341,7 @@ $(document).on("keydown", function (e) {
     if (key == 48 && e.shiftKey) { // Shift + 0 for 10
         var buttonValue = "10";
         $(".container-image-2 > img").attr("src", `./images/${buttonValue}.jpeg`);
+        $("#"+buttonValue).fadeIn(100).fadeOut(100).fadeIn(100);
         if ((turn == 1) || (turn == 4)) {
             userBatting(buttonValue);
         } else if ((turn == 2) || (turn == 3)) {
