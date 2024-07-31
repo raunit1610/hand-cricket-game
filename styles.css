@@ -1,0 +1,106 @@
+:root {
+    --bg-color: #341e1e;
+    --second-bg-color: #111c7b;
+    --text-color: white;
+    --main-color: #00ffee;
+    --btn-color: rgb(90, 212, 198);
+    --font-size-h1: 4vw;
+    --font-size-h2: 2.5vw;
+    --image-height: 20vw;
+    --btn-padding: 1vw 2vw;
+    --container-gap: 2vw;
+    --container-image-gap: 3vw;
+}
+
+body {
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+body > h1 {
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: var(--font-size-h1);
+}
+
+body > h2 {
+    font-family: "Big Shoulders Inline Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--text-color);
+    font-size: var(--font-size-h2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--container-gap);
+}
+
+.container-image {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--container-image-gap);
+}
+
+.container-image-1:hover, .container-image-2:hover {
+    transform: scale(1.1);
+    border-radius: 20%;
+    box-shadow: 0 0 25px var(--second-bg-color);
+}
+
+img {
+    height: var(--image-height);
+    border-radius: 20%;
+}
+
+.container-button {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--container-gap);
+}
+
+.btn, .btn-toss, .start, .btn-result {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: var(--btn-color);
+    color: black;
+    box-shadow: 0 0 25px var(--bg-color);
+    border-radius: 20%;
+    padding: var(--btn-padding);
+}
+
+.btn:hover, .start:hover, .btn-toss:hover, .btn-result:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 6vw;
+        --font-size-h2: 4vw;
+        --image-height: 30vw;
+        --btn-padding: 2vw 3vw;
+        --container-gap: 3vw;
+        --container-image-gap: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-h1: 8vw;
+        --font-size-h2: 6vw;
+        --image-height: 40vw;
+        --btn-padding: 3vw 4vw;
+        --container-gap: 4vw;
+        --container-image-gap: 5vw;
+    }
+}
