@@ -35,6 +35,22 @@ body > h2 {
     font-size: var(--font-size-h2);
 }
 
+.container-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+}
+
+.container-info > h2{
+    font-family: "Big Shoulders Inline Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--text-color);
+    font-size: var(--font-size-h2);
+}
+
 .container {
     display: flex;
     flex-direction: column;
