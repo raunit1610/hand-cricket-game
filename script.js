@@ -193,7 +193,7 @@ function systemBatting(buttonValue,randomSystem) {
     if (userOut == 1) { // Check if user is out
         if (buttonValue != randomSystem) {
             systemBat += randomSystem;
-            $("body > h2").text(`System Made ${systemBat} Runs - Left ${userBat - systemBat} More Runs`);
+            $("body > h2").text(`System Made ${systemBat} Runs - Left ${(userBat - systemBat)+1} More Runs`);
             systemInput(randomSystem);
 
             // Check if system wins
@@ -258,7 +258,7 @@ function userBatting1(buttonValue,randomSystem)
     if (systemOut == 1) { // Check if system is out
         if (buttonValue != randomSystem) {
             userBat += Number(buttonValue);
-            $("body > h2").text(`User Made ${userBat} Runs - Left ${systemBat - userBat} More Runs To Win`);
+            $("body > h2").text(`User Made ${userBat} Runs - Left ${(systemBat - userBat)+1} More Runs To Win`);
             systemInput(randomSystem);
 
             // Check if user wins
