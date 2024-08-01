@@ -40,7 +40,7 @@ body > h2 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    gap: 60vw;
+    gap: 20vw;
 }
 
 .container-info > h2{
