@@ -38,9 +38,9 @@ body > h2 {
 .container-info{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 15vw;
+    gap: 60vw;
 }
 
 .container-info > h2{
