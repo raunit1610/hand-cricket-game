@@ -1,5 +1,7 @@
 var start = false; //Check If Game Started
 
+var extra = 1;
+
 var systemBat = 0; //Keeping Track At System Score at System Turn
 var userBat = 0; //Keeping Track At User Score at User Turn
 
@@ -193,7 +195,7 @@ function systemBatting(buttonValue,randomSystem) {
     if (userOut == 1) { // Check if user is out
         if (buttonValue != randomSystem) {
             systemBat += randomSystem;
-            $("body > h2").text(`System Made ${systemBat} Runs - Left ${userBat - systemBat + 1} More Runs`);
+            $("body > h2").text(`System Made ${systemBat} Runs - Left ${userBat - systemBat + extra} More Runs`);
             systemInput(randomSystem);
 
             // Check if system wins
@@ -258,7 +260,7 @@ function userBatting1(buttonValue,randomSystem)
     if (systemOut == 1) { // Check if system is out
         if (buttonValue != randomSystem) {
             userBat += Number(buttonValue);
-            $("body > h2").text(`User Made ${userBat} Runs - Left ${systemBat - userBat + 1} More Runs To Win`);
+            $("body > h2").text(`User Made ${userBat} Runs - Left ${systemBat - userBat + extra} More Runs To Win`);
             systemInput(randomSystem);
 
             // Check if user wins
