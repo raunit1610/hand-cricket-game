@@ -40,10 +40,10 @@ body > h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15vw;
+    gap: 30vw;
 }
 
-.container-info > h2{
+.container-info > h4{
     font-family: "Big Shoulders Inline Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
